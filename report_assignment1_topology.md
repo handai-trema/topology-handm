@@ -59,9 +59,10 @@ Branch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; develop<br>
 
 
 
-##VSIの設定
+##実機スイッチの設定
 16つのVLANをつくり，それぞれのVLANに3ポートずつ割り当てた．<br>
-実機へログイン後の`show`コマンドによる出力を
+ちなみに，実機へログイン後の`show`コマンドによる出力を
+[text/machine_setting.txt](https://github.com/handai-trema/topology-handm/blob/develop/text/machine_setting)
 に示す．<br>
 
 
@@ -70,9 +71,13 @@ Branch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; develop<br>
 
 
 ##実行結果
-以下のことを行った．<br>
+以下３つのことを行った．<br>
 
-###１．[lib/topology.rb](https://github.com/handai-trema/topology-handm/blob/develop/lib/topology.rb)の実行と画像の出力
+
+###１．複数のパッチをランダムに生成する．
+
+
+###２．[lib/topology.rb](https://github.com/handai-trema/topology-handm/blob/develop/lib/topology.rb)を実行し，画像の出力を得る．
 以下のコマンドを実行した．<br>
 このコマンドはTopolgyを起動し，形成されているトポロジを`tmp`ディレクトリに`topology.png`として画像を保存する．<br>
 そして，図１がこのコマンドによって得られたトポロジ画像である．<br>
@@ -101,6 +106,17 @@ Branch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; develop<br>
 |                                                         図３                                                          |  
 
 
+
+##作業風景
+
+|<img src="https://github.com/handai-trema/topology-handm/blob/develop/img/topology_insert41_from17.png" width="420px">|  
+|:--------------------------------------------------------------------------------------------------------------------:|  
+|                                                         図３                                                          |  
+
+
+
+
 ##関連リンク
 * [課題 (実機でトポロジを動かそう)](https://github.com/handai-trema/deck/blob/develop/week6/assignment1_topology.md#課題1-実機でトポロジを動かそう)
 * [lib/topology.rb](https://github.com/handai-trema/topology-handm/blob/develop/lib/topology.rb)
+* [実機スイッチの設定](https://github.com/handai-trema/topology-handm/blob/develop/text/machine_setting)
