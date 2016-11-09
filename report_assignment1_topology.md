@@ -71,7 +71,7 @@ Branch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; develop<br>
 
 
 ##実行結果
-以下３つのことを行った．<br>
+以下４つのことを行った．<br>
 
 
 ###１．複数のパッチをランダムに生成する．
@@ -91,7 +91,7 @@ Branch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; develop<br>
 |                                                      図１                                                     |  
 
 
-###２．17番ポートのケーブルを抜く．
+###３．17番ポートのケーブルを抜く．
 17番ポートのケーブルを抜くと図２のトポロジ画像を得た．<br>
 
 |<img src="https://github.com/handai-trema/topology-handm/blob/develop/img/topology_pull_from17.png" width="420px">|  
@@ -99,7 +99,7 @@ Branch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; develop<br>
 |                                                       図２                                                        |  
 
 
-###３．17番ポートか抜いたケーブルを41番ポートへさす．
+###４．17番ポートか抜いたケーブルを41番ポートへさす．
 17番ポートか抜いたケーブルを41番ポートへさすと図３のトポロジ画像を得た．<br>
 
 |<img src="https://github.com/handai-trema/topology-handm/blob/develop/img/topology_insert41_from17.png" width="420px">|  
@@ -110,9 +110,9 @@ Branch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; develop<br>
 
 ##作業風景
 
-|<img src="https://github.com/handai-trema/topology-handm/blob/develop/img/topology_insert41_from17.png" width="420px">|  
-|:--------------------------------------------------------------------------------------------------------------------:|  
-|                                                         図３                                                          |  
+|<img src="https://github.com/handai-trema/topology-handm/blob/develop/img/working2.jpg" width="420px">|  
+|:----------------------------------------------------------------------------------------------------:|  
+|                                   ケーブルの抜きさしを行っているところ                                     |  
 
 
 
@@ -121,3 +121,4 @@ Branch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; develop<br>
 * [課題 (実機でトポロジを動かそう)](https://github.com/handai-trema/deck/blob/develop/week6/assignment1_topology.md#課題1-実機でトポロジを動かそう)
 * [lib/topology.rb](https://github.com/handai-trema/topology-handm/blob/develop/lib/topology.rb)
 * [実機スイッチの設定](https://github.com/handai-trema/topology-handm/blob/develop/text/machine_setting)
+* [関連画像](https://github.com/handai-trema/topology-handm/tree/develop/img)
