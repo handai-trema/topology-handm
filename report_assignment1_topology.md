@@ -60,6 +60,13 @@ Branch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; develop<br>
 
 
 ##VSIの設定
+16つのVLANをつくり，それぞれのVLANに3ポートずつ割り当てた．<br>
+実機へログイン後の`show`コマンドによる出力を
+に示す．<br>
+
+
+
+
 
 
 ##実行結果
