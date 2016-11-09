@@ -17,6 +17,12 @@ module View
           next unless nodes[each.dpid_a] && nodes[each.dpid_b]
           gviz.add_edges nodes[each.dpid_a], nodes[each.dpid_b]
         end
+        hosts = topology.hosts.each_with_object([]) do |each|
+          gviz.add_nodes(each.to_s, shape: 'box')
+        end
+        topology.hslinks.each do |each|
+          gviz.add_edges each.mac_address.to_s, each.dpid.to_hex
+        end
         gviz.output png: @output
       end
     end

@@ -15,6 +15,11 @@ module View
                   topology.switches.map(&:to_hex))
     end
 
+    def add_host(mac_address, port, topology)
+      show_status("Host #{mac_address} added",
+                  topology.hosts)
+    end
+
     def add_port(port, topology)
       add_or_delete_port :added, port, topology
     end
@@ -26,6 +31,11 @@ module View
     def add_link(port_a, port_b, topology)
       link = format('%#x-%#x', *([port_a.dpid, port_b.dpid].sort))
       show_status "Link #{link} added", topology.links
+    end
+
+    def add_hslink(host, sw, topology)
+      link = format('%#s-%#x', *([host, sw.dpid]))
+      show_status "HSlink #{link} added", topology.hslinks
     end
 
     def delete_link(port_a, port_b, topology)

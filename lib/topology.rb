@@ -1,4 +1,5 @@
 require 'link'
+require 'hslink'
 
 # Topology information containing the list of known switches, ports,
 # and links.
@@ -21,12 +22,14 @@ class Topology
 
   attr_reader :links
   attr_reader :ports
+  attr_reader :hslinks
 
   def initialize
     @observers = []
     @ports = Hash.new { [].freeze }
     @links = []
     @hosts = []
+    @hslinks = []
   end
 
   def add_observer(observer)
@@ -35,6 +38,14 @@ class Topology
 
   def switches
     @ports.keys
+  end
+
+  def hosts
+    tmp = []
+    @hosts.each do |each|
+      tmp << each[0].to_s
+    end
+    return tmp
   end
 
   def add_switch(dpid, ports)
@@ -72,6 +83,14 @@ class Topology
     @hosts << host
     mac_address, _ip_address, dpid, port_no = *host
     maybe_send_handler :add_host, mac_address, Port.new(dpid, port_no), self
+  end
+
+  def maybe_add_hs_link(hslink)
+    return if @hslinks.include?(hslink)
+    @hslinks << hslink
+    host = hslink.mac_address
+    sw = Port.new(hslink.dpid, hslink.port)
+    maybe_send_handler :add_hslink, host, sw, self
   end
 
   def route(ip_source_address, ip_destination_address)
