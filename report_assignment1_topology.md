@@ -55,15 +55,16 @@ Branch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; develop<br>
 ```
 ./bin/trema run ./lib/topology_controller.rb -- graphviz /tmp/topology.png
 ```
-|<img src="https://github.com/handai-trema/topology-handm/blob/develop/img/topology_initial.png" width="300px">|  
+|<img src="https://github.com/handai-trema/topology-handm/blob/develop/img/topology_initial.png" width="420px">|  
 |:------------------------------------------------------------------------------------------------------------:|  
 |                                                      図１                                                     |  
 
 ###２．17番ポートのケーブルを抜く．
 17番ポートのケーブルを抜くと図２のトポロジ画像を得た．<br>
-|<img src="https://github.com/handai-trema/topology-handm/blob/develop/img/topology_pull_from17.png" width="300px">|  
-|:----------------------------------------------------------------------------------------------------------------:|  
-|                                                         図２                                                      |  
+|<img src="https://github.com/handai-trema/topology-handm/blob/develop/img/topology_pull_from17.png" width="420px">|  
+|:------------------------------------------------------------------------------------------------------------:|  
+|                                                      図２                                                     |  
+
 
 
 ##関連リンク
