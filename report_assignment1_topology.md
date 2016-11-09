@@ -8,6 +8,7 @@ Branch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; develop<br>
 * [課題内容](#assignment)
 * [実機スイッチの設定](#setting)
 * [実行結果](#result)
+* [作業風景](#working_view)
 * [関連リンク](#links)
 
 
@@ -159,7 +160,7 @@ vlan 16:0/46-48
 
 
 
-##作業風景
+##<a name="working_view">作業風景
 
 |<img src="https://github.com/handai-trema/topology-handm/blob/develop/img/working2.jpg" width="420px">|  
 |:----------------------------------------------------------------------------------------------------:|  
