@@ -61,7 +61,9 @@ Branch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; develop<br>
 
 ##実機スイッチの設定
 16つのVLANをつくり，それぞれのVLANに3ポートずつ割り当てた．<br>
-具体的には，下記３つのことを行った．<br>
+具体的には，下記３つのことを行った．（参照：
+[text/description_machine_setting.txt](https://github.com/handai-trema/topology-handm/blob/develop/text/description_machine_setting)
+）<br>
 
 
 ###１．VLANの作成
@@ -72,7 +74,7 @@ vlan <VLAN id>
 ```
 
 ###２．VSIを作成
-以下のコマンド群によって一つずつのVSIを作成した．<br>
+以下のコマンド群を実行することによって一つずつのVSIを作成した．<br>
 ここで，VLANと同様，VSIのidが１のものは既に作成していたため，<VSI id>は2~16のものを作成した．<br>
 そして，dpidには<VSI id>と同じ数字を指定した．<br>
 さらに，<VLAN id>も同様に，<VSI id>と同じものを指定した．<br>
@@ -86,9 +88,28 @@ enable
 exit
 ```
 
+###３．VSIへのポートのマッピング
+以下のコマンド群を実行することによってポートのマッピングを行った．<br>
+```
+interface range gigabitethernet 0/<from_port>-<to_port>
+switchport dotlq-tunnel
+switchport access vlan <VLAN id>
+```
+そして，それぞれのVSIに３つずつポートを割り当てる方法は下記のように行った．<br>
+```
+vlan 1:0/1-3
+vlan 2:0/4-6
+vlan 3:0/7-9
+vlan 4:0/10-12
+・・・（省略）・・・
+vlan 16:0/46-48
+```
+
 最後に，実機へログイン後の`show`コマンドによる出力を
 [text/machine_setting.txt](https://github.com/handai-trema/topology-handm/blob/develop/text/machine_setting)
 に示す．<br>
+
+
 
 
 
@@ -146,4 +167,5 @@ exit
 * [課題 (実機でトポロジを動かそう)](https://github.com/handai-trema/deck/blob/develop/week6/assignment1_topology.md#課題1-実機でトポロジを動かそう)
 * [lib/topology.rb](https://github.com/handai-trema/topology-handm/blob/develop/lib/topology.rb)
 * [実機スイッチの設定](https://github.com/handai-trema/topology-handm/blob/develop/text/machine_setting)
+* [実機スイッチの設定方法](https://github.com/handai-trema/topology-handm/blob/develop/text/description_machine_setting)
 * [関連画像](https://github.com/handai-trema/topology-handm/tree/develop/img)
