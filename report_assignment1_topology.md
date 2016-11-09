@@ -61,7 +61,32 @@ Branch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; develop<br>
 
 ##実機スイッチの設定
 16つのVLANをつくり，それぞれのVLANに3ポートずつ割り当てた．<br>
-ちなみに，実機へログイン後の`show`コマンドによる出力を
+具体的には，下記３つのことを行った．<br>
+
+
+###１．VLANの作成
+下記コマンドによってVLANを作成する．<br>
+ちなみに，idが１のVLANは最初に実機を使った演習で作成したいたため，２〜１６のidを持つVLANを作成した．<br>
+```
+vlan <VLAN id>
+```
+
+###２．VSIを作成
+以下のコマンド群によって一つずつのVSIを作成した．<br>
+ここで，VLANと同様，VSIのidが１のものは既に作成していたため，<VSI id>は2~16のものを作成した．<br>
+そして，dpidには<VSI id>と同じ数字を指定した．<br>
+さらに，<VLAN id>も同様に，<VSI id>と同じものを指定した．<br>
+```
+openflow openflow-id <VSI id> virtual-switch
+controller controller-name cntl1 1 <IP address of controller> port 6653
+dpid <dpid>
+openflow-vlan <VLAN id>
+miss-action controller
+enable
+exit
+```
+
+最後に，実機へログイン後の`show`コマンドによる出力を
 [text/machine_setting.txt](https://github.com/handai-trema/topology-handm/blob/develop/text/machine_setting)
 に示す．<br>
 
