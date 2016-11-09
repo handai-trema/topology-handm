@@ -65,7 +65,12 @@ Branch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; develop<br>
 |:------------------------------------------------------------------------------------------------------------:|  
 |                                                      図２                                                     |  
 
-
+###３．17番ポートか抜いたケーブルを41番ポートへさす．
+17番ポートか抜いたケーブルを41番ポートへさすと図３のトポロジ画像を得た．<br>
+<figure>
+  <img src="https://github.com/handai-trema/topology-handm/blob/develop/img/topology_insert41_from17.png" width="420px">
+  <figcaption>図３</figcaption>
+</figure>
 
 ##関連リンク
 * [課題 (実機でトポロジを動かそう)](https://github.com/handai-trema/deck/blob/develop/week6/assignment1_topology.md#課題1-実機でトポロジを動かそう)
