@@ -72,14 +72,14 @@ Branch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; develop<br>
 ）<br>
 
 
-###１．VLANの作成
+###① VLANの作成
 下記コマンドによってVLANを作成する．<br>
 ちなみに，idが１のVLANは最初に実機を使った演習で作成したいたため，２〜１６のidを持つVLANを作成した．<br>
 ```
 vlan <VLAN id>
 ```
 
-###２．VSIを作成
+###② VSIを作成
 以下のコマンド群を実行することによって一つずつのVSIを作成した．<br>
 ここで，VLANと同様，VSIのidが１のものは既に作成していたため，<VSI id>は2~16のものを作成した．<br>
 そして，dpidには<VSI id>と同じ数字を指定した．<br>
@@ -94,7 +94,7 @@ enable
 exit
 ```
 
-###３．VSIへのポートのマッピング
+###③ VSIへのポートのマッピング
 以下のコマンド群を実行することによってポートのマッピングを行った．<br>
 ```
 interface range gigabitethernet 0/<from_port>-<to_port>
