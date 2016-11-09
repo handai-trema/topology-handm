@@ -11,9 +11,9 @@ Branch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; develop<br>
 ###メンバー
 <table>
   <tr>
-    <td>氏名</td>
-    <td>学籍番号</td>
-    <td>所属研究室</td>
+    <td><B>氏名</B></td>
+    <td><B>学籍番号</B></td>
+    <td><B>所属研究室</B></td>
   </tr>
   <tr>
     <td>阿部修也</td>
@@ -40,9 +40,33 @@ Branch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; develop<br>
 
 
 
+##課題内容
+```
+課題1 (実機でトポロジを動かそう)
+
+1. 実機スイッチ上に VSI x16 を作成 (各VSIは2ポート以上)
+2. 全ポートを適当にケーブリング
+3. Topologyを使ってトポロジを表示
+4. ケーブルを抜き差ししてトポロジ画像が更新されることを確認
+レポートには次のことを書いてください。
+
+・表示できたトポロジ画像。何パターンかあると良いです
+・ケーブルを抜き差ししたときの画像
+・実機スイッチのセットアップ情報。作業中の写真なども入れるとグーです
+```
+
+
+
 
 
 ##VSIの設定
+16つのVLANをつくり，それぞれのVLANに3ポートずつ割り当てた．<br>
+実機へログイン後の`show`コマンドによる出力を
+に示す．<br>
+
+
+
+
 
 
 ##実行結果
@@ -55,9 +79,11 @@ Branch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; develop<br>
 ```
 ./bin/trema run ./lib/topology_controller.rb -- graphviz /tmp/topology.png
 ```
+
 |<img src="https://github.com/handai-trema/topology-handm/blob/develop/img/topology_initial.png" width="420px">|  
 |:------------------------------------------------------------------------------------------------------------:|  
 |                                                      図１                                                     |  
+
 
 ###２．17番ポートのケーブルを抜く．
 17番ポートのケーブルを抜くと図２のトポロジ画像を得た．<br>
@@ -66,12 +92,14 @@ Branch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; develop<br>
 |:----------------------------------------------------------------------------------------------------------------:|  
 |                                                       図２                                                        |  
 
+
 ###３．17番ポートか抜いたケーブルを41番ポートへさす．
 17番ポートか抜いたケーブルを41番ポートへさすと図３のトポロジ画像を得た．<br>
-<figure>
-  <img src="https://github.com/handai-trema/topology-handm/blob/develop/img/topology_insert41_from17.png" width="420px"><br>
-  <figcaption>図３</figcaption>
-</figure>
+
+|<img src="https://github.com/handai-trema/topology-handm/blob/develop/img/topology_insert41_from17.png" width="420px">|  
+|:--------------------------------------------------------------------------------------------------------------------:|  
+|                                                         図３                                                          |  
+
 
 ##関連リンク
 * [課題 (実機でトポロジを動かそう)](https://github.com/handai-trema/deck/blob/develop/week6/assignment1_topology.md#課題1-実機でトポロジを動かそう)
