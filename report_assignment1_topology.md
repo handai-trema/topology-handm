@@ -68,7 +68,7 @@ Branch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; develop<br>
 ###３．17番ポートか抜いたケーブルを41番ポートへさす．
 17番ポートか抜いたケーブルを41番ポートへさすと図３のトポロジ画像を得た．<br>
 <figure>
-  <img src="https://github.com/handai-trema/topology-handm/blob/develop/img/topology_insert41_from17.png" width="420px">
+  <img src="https://github.com/handai-trema/topology-handm/blob/develop/img/topology_insert41_from17.png" width="420px"><br>
   <figcaption>図３</figcaption>
 </figure>
 
