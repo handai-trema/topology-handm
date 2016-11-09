@@ -10,11 +10,11 @@ Branch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; develop<br>
 ##提出者: H&Mグループ
 ###メンバー
 <table>
-  <B><tr>
-    <td>氏名</td>
-    <td>学籍番号</td>
-    <td>所属研究室</td>
-  </tr></B>
+  <tr>
+    <td><B>氏名</B></td>
+    <td><B>学籍番号</B></td>
+    <td><B>所属研究室</B></td>
+  </tr>
   <tr>
     <td>阿部修也</td>
     <td>33E16002</td>
@@ -42,7 +42,7 @@ Branch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; develop<br>
 
 ##課題内容
 ```
-<B>課題1 (実機でトポロジを動かそう)</B>
+課題1 (実機でトポロジを動かそう)
 
 1. 実機スイッチ上に VSI x16 を作成 (各VSIは2ポート以上)
 2. 全ポートを適当にケーブリング
