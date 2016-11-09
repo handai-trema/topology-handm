@@ -1,0 +1,365 @@
+#Last modified by operator at Mon Jan 17 07:05:56 2000 with version V3.0.0.4
+!
+clock timezone JST +9
+system flowcontrol off
+!
+vlan 1
+  name "VLAN0001"
+!
+vlan 2
+!
+vlan 3
+!
+vlan 4
+!
+vlan 5
+!
+vlan 6
+!
+vlan 7
+!
+vlan 8
+!
+vlan 9
+!
+vlan 10
+!
+vlan 11
+!
+vlan 12
+!
+vlan 13
+!
+vlan 14
+!
+vlan 15
+!
+vlan 16
+!
+spanning-tree disable
+spanning-tree mode pvst
+!
+interface mgmt 0
+  ip address 192.168.1.1 255.255.255.0
+!
+interface gigabitethernet 0/1
+  switchport mode dot1q-tunnel
+  switchport access vlan 1
+!
+interface gigabitethernet 0/2
+  switchport mode dot1q-tunnel
+  switchport access vlan 1
+!
+interface gigabitethernet 0/3
+  switchport mode dot1q-tunnel
+  switchport access vlan 1
+!
+interface gigabitethernet 0/4
+  switchport mode dot1q-tunnel
+  switchport access vlan 2
+!
+interface gigabitethernet 0/5
+  switchport mode dot1q-tunnel
+  switchport access vlan 2
+!
+interface gigabitethernet 0/6
+  switchport mode dot1q-tunnel
+  switchport access vlan 2
+!
+interface gigabitethernet 0/7
+  switchport mode dot1q-tunnel
+  switchport access vlan 3
+!
+interface gigabitethernet 0/8
+  switchport mode dot1q-tunnel
+  switchport access vlan 3
+!
+interface gigabitethernet 0/9
+  switchport mode dot1q-tunnel
+  switchport access vlan 3
+!
+interface gigabitethernet 0/10
+  switchport mode dot1q-tunnel
+  switchport access vlan 4
+!
+interface gigabitethernet 0/11
+  switchport mode dot1q-tunnel
+  switchport access vlan 4
+!
+interface gigabitethernet 0/12
+  switchport mode dot1q-tunnel
+  switchport access vlan 4
+!
+interface gigabitethernet 0/13
+  switchport mode dot1q-tunnel
+  switchport access vlan 5
+!
+interface gigabitethernet 0/14
+  switchport mode dot1q-tunnel
+  switchport access vlan 5
+!
+interface gigabitethernet 0/15
+  switchport mode dot1q-tunnel
+  switchport access vlan 5
+!
+interface gigabitethernet 0/16
+  switchport mode dot1q-tunnel
+  switchport access vlan 6
+!
+interface gigabitethernet 0/17
+  switchport mode dot1q-tunnel
+  switchport access vlan 6
+!
+interface gigabitethernet 0/18
+  switchport mode dot1q-tunnel
+  switchport access vlan 6
+!
+interface gigabitethernet 0/19
+  switchport mode dot1q-tunnel
+  switchport access vlan 7
+!
+interface gigabitethernet 0/20
+  switchport mode dot1q-tunnel
+  switchport access vlan 7
+!
+interface gigabitethernet 0/21
+  switchport mode dot1q-tunnel
+  switchport access vlan 7
+!
+interface gigabitethernet 0/22
+  switchport mode dot1q-tunnel
+  switchport access vlan 8
+!
+interface gigabitethernet 0/23
+  switchport mode dot1q-tunnel
+  switchport access vlan 8
+!
+interface gigabitethernet 0/24
+  switchport mode dot1q-tunnel
+  switchport access vlan 8
+!
+interface gigabitethernet 0/25
+  switchport mode dot1q-tunnel
+  switchport access vlan 9
+!
+interface gigabitethernet 0/26
+  switchport mode dot1q-tunnel
+  switchport access vlan 9
+!
+interface gigabitethernet 0/27
+  switchport mode dot1q-tunnel
+  switchport access vlan 9
+!
+interface gigabitethernet 0/28
+  switchport mode dot1q-tunnel
+  switchport access vlan 10
+!
+interface gigabitethernet 0/29
+  switchport mode dot1q-tunnel
+  switchport access vlan 10
+!
+interface gigabitethernet 0/30
+  switchport mode dot1q-tunnel
+  switchport access vlan 10
+!
+interface gigabitethernet 0/31
+  switchport mode dot1q-tunnel
+  switchport access vlan 11
+!
+interface gigabitethernet 0/32
+  switchport mode dot1q-tunnel
+  switchport access vlan 11
+!
+interface gigabitethernet 0/33
+  switchport mode dot1q-tunnel
+  switchport access vlan 11
+!
+interface gigabitethernet 0/34
+  switchport mode dot1q-tunnel
+  switchport access vlan 12
+!
+interface gigabitethernet 0/35
+  switchport mode dot1q-tunnel
+  switchport access vlan 12
+!
+interface gigabitethernet 0/36
+  switchport mode dot1q-tunnel
+  switchport access vlan 12
+!
+interface gigabitethernet 0/37
+  switchport mode dot1q-tunnel
+  switchport access vlan 13
+!
+interface gigabitethernet 0/38
+  switchport mode dot1q-tunnel
+  switchport access vlan 13
+!
+interface gigabitethernet 0/39
+  switchport mode dot1q-tunnel
+  switchport access vlan 13
+!
+interface gigabitethernet 0/40
+  switchport mode dot1q-tunnel
+  switchport access vlan 14
+!
+interface gigabitethernet 0/41
+  switchport mode dot1q-tunnel
+  switchport access vlan 14
+!
+interface gigabitethernet 0/42
+  switchport mode dot1q-tunnel
+  switchport access vlan 14
+!
+interface gigabitethernet 0/43
+  switchport mode dot1q-tunnel
+  switchport access vlan 15
+!
+interface gigabitethernet 0/44
+  switchport mode dot1q-tunnel
+  switchport access vlan 15
+!
+interface gigabitethernet 0/45
+  switchport mode dot1q-tunnel
+  switchport access vlan 15
+!
+interface gigabitethernet 0/46
+  switchport mode dot1q-tunnel
+  switchport access vlan 16
+!
+interface gigabitethernet 0/47
+  switchport mode dot1q-tunnel
+  switchport access vlan 16
+!
+interface gigabitethernet 0/48
+  switchport mode dot1q-tunnel
+  switchport access vlan 16
+!
+interface tengigabitethernet 0/49
+  switchport mode access
+!
+interface tengigabitethernet 0/50
+  switchport mode access
+!
+interface tengigabitethernet 0/51
+  switchport mode access
+!
+interface tengigabitethernet 0/52
+  switchport mode access
+!
+interface vlan 1
+!
+line vty 0 2
+!
+openflow openflow-id 1 virtual-switch
+  controller controller-name cntl1 1 192.168.1.4 port 6653
+  dpid 0000000000000001
+  miss-action controller
+  openflow-vlan 1
+  enable
+!
+openflow openflow-id 2 virtual-switch
+  controller controller-name cntl1 1 192.168.1.4 port 6653
+  dpid 0000000000000002
+  miss-action controller
+  openflow-vlan 2
+  enable
+!
+openflow openflow-id 3 virtual-switch
+  controller controller-name cntl1 1 192.168.1.4 port 6653
+  dpid 0000000000000003
+  miss-action controller
+  openflow-vlan 3
+  enable
+!
+openflow openflow-id 4 virtual-switch
+  controller controller-name cntl1 1 192.168.1.4 port 6653
+  dpid 0000000000000004
+  miss-action controller
+  openflow-vlan 4
+  enable
+!
+openflow openflow-id 5 virtual-switch
+  controller controller-name cntl1 1 192.168.1.4 port 6653
+  dpid 0000000000000005
+  miss-action controller
+  openflow-vlan 5
+  enable
+!
+openflow openflow-id 6 virtual-switch
+  controller controller-name cntl1 1 192.168.1.4 port 6653
+  dpid 0000000000000006
+  miss-action controller
+  openflow-vlan 6
+  enable
+!
+openflow openflow-id 7 virtual-switch
+  controller controller-name cntl1 1 192.168.1.4 port 6653
+  dpid 0000000000000007
+  miss-action controller
+  openflow-vlan 7
+  enable
+!
+openflow openflow-id 8 virtual-switch
+  controller controller-name cntl1 1 192.168.1.4 port 6653
+  dpid 0000000000000008
+  miss-action controller
+  openflow-vlan 8
+  enable
+!
+openflow openflow-id 9 virtual-switch
+  controller controller-name cntl1 1 192.168.1.4 port 6653
+  dpid 0000000000000009
+  miss-action controller
+  openflow-vlan 9
+  enable
+!
+openflow openflow-id 10 virtual-switch
+  controller controller-name cntl1 1 192.168.1.4 port 6653
+  dpid 0000000000000010
+  miss-action controller
+  openflow-vlan 10
+  enable
+!
+openflow openflow-id 11 virtual-switch
+  controller controller-name cntl1 1 192.168.1.4 port 6653
+  dpid 0000000000000011
+  miss-action controller
+  openflow-vlan 11
+  enable
+!
+openflow openflow-id 12 virtual-switch
+  controller controller-name cntl1 1 192.168.1.4 port 6653
+  dpid 0000000000000012
+  miss-action controller
+  openflow-vlan 12
+  enable
+!
+openflow openflow-id 13 virtual-switch
+  controller controller-name cntl1 1 192.168.1.4 port 6653
+  dpid 0000000000000013
+  miss-action controller
+  openflow-vlan 13
+  enable
+!
+openflow openflow-id 14 virtual-switch
+  controller controller-name cntl1 1 192.168.1.4 port 6653
+  dpid 0000000000000014
+  miss-action controller
+  openflow-vlan 14
+  enable
+!
+openflow openflow-id 15 virtual-switch
+  controller controller-name cntl1 1 192.168.1.4 port 6653
+  dpid 0000000000000015
+  miss-action controller
+  openflow-vlan 15
+  enable
+!
+openflow openflow-id 16 virtual-switch
+  controller controller-name cntl1 1 192.168.1.4 port 6653
+  dpid 0000000000000016
+  miss-action controller
+  openflow-vlan 16
+  enable
+!
+

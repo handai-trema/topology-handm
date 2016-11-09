@@ -1,0 +1,33 @@
+実機に設定したこと
+１．VLANの作成
+vlan <VLAN id>
+のコマンドでVLANを作成。idが１のVLANは最初に実機を使った演習で作成したいたので、２〜１６のidを持つVLANを作成。
+
+２．VSIを作成
+以下のコマンド群で、VSIを作成した。
+
+openflow openflow-id <VSI id> virtual-switch
+controller controller-name cntl1 1 <IP address of controller> port 6653
+dpid <dpid>
+openflow-vlan <VLAN id>
+miss-action controller
+enable
+exit
+
+VLANと同様、VSIのidが１のものは既に作成していたので、<VSI id>は2~16のものを作成。dpidには、<VSI id>と同じ数字を指定。<VLAN id>も同様に、<VSI id>と同じものを指定した。
+
+3.VSIへのポートのマッピング
+以下のコマンド群で、ポートのマッピングを行った。
+
+interface range gigabitethernet 0/<from_port>-<to_port>
+switchport dotlq-tunnel
+switchport access vlan <VLAN id>
+
+それぞれのVSIに３つずつポートを割り当てた。割り当て方は、
+vlan 1:0/1-3
+vlan 2:0/4-6
+vlan 3:0/7-9
+vlan 4:0/10-12
+・・・（省略）・・・
+vlan 16:0/46-48
+という具合である。
