@@ -47,15 +47,18 @@ Branch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; develop<br>
 
 ##実行結果
 以下のことを行った．<br>
-###１．[topology-handm.rb](https://github.com/handai-trema/topology-handm/blob/develop/lib/topology.rb)の実行と画像の出力
+###１．[lib/topology.rb](https://github.com/handai-trema/topology-handm/blob/develop/lib/topology.rb)の実行と画像の出力
 以下のコマンドを実行した．<br>
+このコマンドはTopolgyを起動し，形成されているトポロジを`tmp`ディレクトリに`topology.png`として画像を保存する．<br>
+そして，図１がこのコマンドによって得られたトポロジ画像である．<br>
 ```
 ./bin/trema run ./lib/topology_controller.rb -- graphviz /tmp/topology.png
 ```
-
+<img src="https://github.com/handai-trema/topology-handm/blob/develop/img/topology_initial.png">
 
 
 
 
 ##関連リンク
 * [課題 (実機でトポロジを動かそう)](https://github.com/handai-trema/deck/blob/develop/week6/assignment1_topology.md#課題1-実機でトポロジを動かそう)
+* [lib/topology.rb](https://github.com/handai-trema/topology-handm/blob/develop/lib/topology.rb)
