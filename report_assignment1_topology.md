@@ -7,8 +7,7 @@ Branch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; develop<br>
 
 
 
-##提出者
-<B>H&Mグループ<B>
+##提出者: H&Mグループ
 ###メンバー
 <table>
   <tr>
@@ -43,7 +42,20 @@ Branch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; develop<br>
 
 
 
-##
+##VSIの設定
+
+
+##実行結果
+以下のことを行った．<br>
+###１．[topology-handm.rb](https://github.com/handai-trema/topology-handm/blob/develop/lib/topology.rb)の実行と画像の出力
+以下のコマンドを実行した．<br>
+```
+./bin/trema run ./lib/topology_controller.rb -- graphviz /tmp/topology.png
+```
+
+
+
+
 
 ##関連リンク
 * [課題 (実機でトポロジを動かそう)](https://github.com/handai-trema/deck/blob/develop/week6/assignment1_topology.md#課題1-実機でトポロジを動かそう)
