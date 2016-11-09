@@ -75,6 +75,7 @@ Branch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; develop<br>
 
 
 ###１．複数のパッチをランダムに生成する．
+実機のポートを２つずランダムに選び，複数のパッチを形成した．<br>
 
 
 ###２．[lib/topology.rb](https://github.com/handai-trema/topology-handm/blob/develop/lib/topology.rb)を実行し，画像の出力を得る．
