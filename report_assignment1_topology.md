@@ -61,7 +61,7 @@ Branch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; develop<br>
     </td>
   </tr>
   <tr>
-    <td>図１</td>
+    <td><center>図１</center></td>
   </tr>
 </table>
 
