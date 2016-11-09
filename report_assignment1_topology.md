@@ -54,6 +54,9 @@ Branch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; develop<br>
 ```
 ./bin/trema run ./lib/topology_controller.rb -- graphviz /tmp/topology.png
 ```
+|<img src="https://github.com/handai-trema/topology-handm/blob/develop/img/topology_initial.png" width="500px">|  
+|:------------------------------------------------------------------------------------------------------------:|  
+|                                                      図１                                                     |  
 <table>
   <tr>
     <td>
@@ -61,7 +64,7 @@ Branch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; develop<br>
     </td>
   </tr>
   <tr>
-    <td><center>図１</center></td>
+    <td>図１</td>
   </tr>
 </table>
 
