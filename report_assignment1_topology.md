@@ -47,6 +47,7 @@ Branch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; develop<br>
 
 ##実行結果
 以下のことを行った．<br>
+
 ###１．[lib/topology.rb](https://github.com/handai-trema/topology-handm/blob/develop/lib/topology.rb)の実行と画像の出力
 以下のコマンドを実行した．<br>
 このコマンドはTopolgyを起動し，形成されているトポロジを`tmp`ディレクトリに`topology.png`として画像を保存する．<br>
@@ -54,20 +55,15 @@ Branch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; develop<br>
 ```
 ./bin/trema run ./lib/topology_controller.rb -- graphviz /tmp/topology.png
 ```
-|<img src="https://github.com/handai-trema/topology-handm/blob/develop/img/topology_initial.png" width="500px">|  
+|<img src="https://github.com/handai-trema/topology-handm/blob/develop/img/topology_initial.png" width="300px">|  
 |:------------------------------------------------------------------------------------------------------------:|  
 |                                                      図１                                                     |  
-<table>
-  <tr>
-    <td>
-      <img src="https://github.com/handai-trema/topology-handm/blob/develop/img/topology_initial.png" width="500px">
-    </td>
-  </tr>
-  <tr>
-    <td>図１</td>
-  </tr>
-</table>
 
+###２．17番ポートのケーブルを抜く．
+17番ポートのケーブルを抜くと図２のトポロジ画像を得た．<br>
+|<img src="https://github.com/handai-trema/topology-handm/blob/develop/img/topology_pull_from17.png" width="300px">|  
+|:------------------------------------------------------------------------------------------------------------:|  
+|                                                      図２                                                     | 　
 
 
 ##関連リンク
