@@ -18,6 +18,7 @@ class CommandLine
     set_destination_mac_flag
     define_text_command
     define_graphviz_command
+    define_html_command
     run args
   end
 
@@ -48,6 +49,15 @@ class CommandLine
     end
   end
 
+  def define_html_command
+    desc 'Displays topology information (html mode)'
+    arg_name 'output_file'
+    command :html do |cmd|
+      cmd.action(&method(:create_html_view))
+    end
+  end
+
+
   private
 
   def create_text_view(_global_options, _options, _args)
@@ -62,4 +72,14 @@ class CommandLine
       @view = View::Graphviz.new(args[0])
     end
   end
+
+  def create_html_view(_global_options, _options, args)
+    require 'view/html'
+    if args.empty?
+      @view = View::Html.new
+    else
+      @view = View::Html.new(args[0])
+    end
+  end
+
 end
