@@ -1,4 +1,4 @@
-sudo rm /tmp/*
+sudo rm -rf /tmp/*
 ./bin/trema killall --all
 sudo ovs-vsctl del-br br0x1
 sudo ovs-vsctl del-br br0x2

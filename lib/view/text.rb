@@ -20,6 +20,11 @@ module View
                   topology.hosts)
     end
 
+    def delete_host(mac_address, port, topology)
+      show_status("Host #{mac_address} deleted",
+                  topology.hosts)
+    end
+
     def add_port(port, topology)
       add_or_delete_port :added, port, topology
     end
@@ -33,14 +38,19 @@ module View
       show_status "Link #{link} added", topology.links
     end
 
-    def add_hslink(host, sw, topology)
-      link = format('%#s-%#x', *([host, sw.dpid]))
-      show_status "HSlink #{link} added", topology.hslinks
-    end
-
     def delete_link(port_a, port_b, topology)
       link = format('%#x-%#x', *([port_a.dpid, port_b.dpid].sort))
       show_status "Link #{link} deleted", topology.links
+    end
+
+    def add_hslink(host, sw_port, topology)
+      link = format('%#x-%#s', *([sw_port.dpid, host]))
+      show_status "HSlink #{link} added", topology.hslinks
+    end
+
+    def delete_hslink(host, sw_port, topology)
+      link = format('%#x-%#s', *([sw_port.dpid, host]))
+      show_status "HSlink #{link} deleted", topology.hslinks
     end
 
     def to_s

@@ -68,6 +68,7 @@ class Topology
     @ports[port.dpid].delete_if { |each| each.number == port.number }
     maybe_send_handler :delete_port, Port.new(port.dpid, port.number), self
     maybe_delete_link port
+    maybe_delete_hslink port
   end
 
   def maybe_add_link(link)
@@ -85,12 +86,12 @@ class Topology
     maybe_send_handler :add_host, mac_address, Port.new(dpid, port_no), self
   end
 
-  def maybe_add_hs_link(hslink)
+  def maybe_add_hslink(hslink)
     return if @hslinks.include?(hslink)
     @hslinks << hslink
     host = hslink.mac_address
-    sw = Port.new(hslink.dpid, hslink.port)
-    maybe_send_handler :add_hslink, host, sw, self
+    sw_port = Port.new(hslink.dpid, hslink.port)
+    maybe_send_handler :add_hslink, host, sw_port, self
   end
 
   def route(ip_source_address, ip_destination_address)
@@ -106,6 +107,35 @@ class Topology
       port_a = Port.new(each.dpid_a, each.port_a)
       port_b = Port.new(each.dpid_b, each.port_b)
       maybe_send_handler :delete_link, port_a, port_b, self
+    end
+  end
+
+  def maybe_delete_hslink(port)
+    @hslinks.each do |each|
+      next unless each.connect_to?(port)
+      @hslinks -= [each]
+      host = each.mac_address
+      sw_port = Port.new(each.dpid, each.port)
+      maybe_send_handler :delete_hslink, host, sw_port, self
+      maybe_delete_host each
+    end
+  end
+
+  def maybe_delete_host(hslink)
+    ct = 0
+    @hslinks.each do |each|
+      if ((each.mac_address == hslink.mac_address) && (each.ip_address == hslink.ip_address)) then
+        ct += 1
+      end
+    end
+    if ct == 0 then
+      mac_address = hslink.mac_address
+      ip_address = hslink.ip_address
+      dpid = hslink.dpid
+      port_no = hslink.port
+      host = [mac_address, ip_address, dpid, port_no]
+      @hosts.delete(host)
+      maybe_send_handler :delete_host, mac_address, Port.new(dpid, port_no), self
     end
   end
 

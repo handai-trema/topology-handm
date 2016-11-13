@@ -51,7 +51,7 @@ class TopologyController < Trema::Controller
                                packet_in.source_ip_address,
                                dpid,
                                packet_in.in_port)
-      @topology.maybe_add_hs_link Hslink.new(dpid, packet_in)
+      @topology.maybe_add_hslink HSlink.new(dpid, packet_in)
     end
   end
 
