@@ -62,7 +62,7 @@ Branch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; develop<br>
 まずtremaからコマンドを呼び出すことができるように，[command_line.rb](/lib/command_line.rb)に追記した．
 編集内容は次のようにした．まずpublic部分に
 
-```
+```ruby
   def define_html_command
     desc 'Displays topology information (html mode)'
     arg_name 'output_file'
@@ -72,7 +72,7 @@ Branch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; develop<br>
 ```
 と記述し，コマンドオプションをprivateのcreate_html_viewメソッドを実行する．そのメソッドは次のようになる．
 
-```
+```ruby
   def create_html_view(_global_options, _options, args)
     require 'view/html'
     if args.empty?
@@ -88,7 +88,7 @@ Branch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; develop<br>
 
 ### インスタンス変数の初期化
 
-```
+```ruby
     def initialize(output = 'topology.html')
       @nodes=[]
       @edges=[]
@@ -98,7 +98,7 @@ Branch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; develop<br>
 存在するノード，エッジを記録するためのインスタンス変数@nodes,@edgesを空の配列として宣言し，出力先ファイル名@outputを引数より受け取る．
 ### ノードとエッジの追加メソッド
 
-```
+```ruby
   def pushnode(id,ishost)
     if ishost then
       @nodes.push({id:id,label:id,image:"./lib/view/laptop.png",shape:'image'}) 
@@ -117,7 +117,7 @@ pushedgeは，2ノード間のエッジを作成するための配列を格納�
 
 ### updateに対する挙動
 
-```
+```ruby
   def update(_event, _changed, topology)
       @nodes=[]
       topology.switches.each_with_object({}) do |each,tmp|
@@ -142,7 +142,7 @@ updateは，トポロジの情報が更新されたときに実行され，topol
 
 ### 出力
 
-```
+```ruby
   def output()
     base =File.read("./lib/view/create_vis_base.txt")
     base2 =File.read("./lib/view/create_vis_base2.txt")
