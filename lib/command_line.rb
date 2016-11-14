@@ -76,7 +76,7 @@ class CommandLine
   def create_html_view(_global_options, _options, args)
     require 'view/html'
     if args.empty?
-      @view = View::Html.new
+      @view = View::Html.new()
     else
       @view = View::Html.new(args[0])
     end

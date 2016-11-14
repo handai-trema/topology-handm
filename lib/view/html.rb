@@ -13,18 +13,21 @@ module View
 
     # rubocop:disable AbcSize
     def update(_event, _changed, topology)
+      @nodes=[]
       topology.switches.each_with_object({}) do |each,tmp|
 	pushnode(each,false) 
       end
       topology.hosts.each_with_object([]) do |each|
-	pushnode(each.to_hex,true)
-      end
+	pushnode(each.to_s,true)
+      end 
+ 
       topology.links.each do |each|
 	pushedge(each.dpid_a,each.dpid_b)
       end
       topology.hslinks.each do |each|
-	pushedge(each.mac_address.to_hex,each.dpid)
+	pushedge(each.mac_address.to_s,each.dpid)
       end
+      @edges = @edges.uniq
       output()
     end
   private
@@ -36,13 +39,13 @@ module View
   end
   def pushnode(id,ishost)
     if ishost then
-      @nodes.push({id:id,label:id.to_hex,image:"file:///home/ensyuu2/topology-handm/lib/view/laptop.png",shape:'image'}) 
+      @nodes.push({id:id,label:id,image:"./lib/view/laptop.png",shape:'image'}) 
     else
-      @nodes.push({id:id,label:id.to_hex,image:"file:///home/ensyuu2/topology-handm/lib/view/switch.png",shape:"image"})
+      @nodes.push({id:id,label:id.to_hex,image:"./lib/view/switch.png",shape:"image"})
     end
   end
   def pushedge(from,to)
-    @edges.push({from:from,to:to,arrows:"to,from"})
+    @edges.push({from:from,to:to})
   end
   end
 end

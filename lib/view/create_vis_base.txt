@@ -2,8 +2,8 @@
 <head>
 
   <title>NETWORK GRAPH DEMO by handm group</title>
-  <script src="file:///home/ensyuu2/topology-handm/lib/view/vis.js"></script>
-  <link href="file:///home/ensyuu2/topology-handm/lib/view/vis.css" rel="stylesheet" type="text/css" />
+  <script src="./lib/view/vis.js"></script>
+  <link href="./lib/view/vis.css" rel="stylesheet" type="text/css" />
 
 
   <style type="text/css">
